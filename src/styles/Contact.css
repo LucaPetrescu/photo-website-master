@@ -1,17 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-
-body{
+/* body{
     font-family: 'Courier Prime', monospace;
-}
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+        
+} */
 
 .contact-info{
     text-align:center;
     margin-bottom: 15px;
-    margin-top: 332px;
+    margin-top: 531px;
 }
 
 .contact-element {
     display: inline-block;
-    padding: 100px;
+     margin: 70px; 
     padding-top: 230px;
+}
+
+.contact-info h2{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.footer{
+    position: absolute;
+        bottom: 0;
+        width: 100%;
 }

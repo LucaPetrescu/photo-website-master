@@ -8,49 +8,59 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
-  const [color, setColor] = useState(false)
+  const [color, setColor] = useState(false);
   const changeColor = () => {
-    if(window.scrollY >=90 ){
-      setColor(true)
-    }else{
-      setColor(false)
+    if (window.scrollY >= 90) {
+      setColor(true);
+    } else {
+      setColor(false);
     }
-  }
+  };
 
-  window.addEventListener('scroll', changeColor)
+  window.addEventListener("scroll", changeColor);
 
   const closeMenu = () => setClick(false);
 
   return (
     <>
-      <div className={color ? 'header bg-header':'header'}>
+      <div className={color ? "header bg-header" : "header"}>
         <nav className="navbar">
-          <a href="/" className="logo">Luca Petrescu</a>
+          <a href="/" className="logo">
+            Luca Petrescu
+          </a>
           <div className="hamburger" onClick={handleClick}>
             {click ? (
-              <FaTimes size={30} style={{ color: "#ffffff" }} />
+              <FaTimes
+                className={color ? "hamburger" : "hamburger changed"}
+                size={30}
+                // style={{ color: "#ffffff" }}
+              />
             ) : (
-              <FaBars size={30} style={{ color: "#ffffff" }} />
+              <FaBars
+                className={color ? "hamburger" : "hamburger changed"}
+                size={30}
+                // style={{ color: "#ffffff" }}
+              />
             )}
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <a href="/" onClick={closeMenu}>
+            <li className={color ? "nav-item changed" : "nav-item"}>
+              <Link to="/" className="nav-item-link" onClick={closeMenu}>
                 Home
-              </a>
+              </Link>
             </li>
-            <li className="nav-item">
-              <Link to='/about'>
+            <li className={color ? "nav-item changed" : "nav-item"}>
+              <Link to="/about" className="nav-item-link">
                 About Me
               </Link>
             </li>
-            <li className="nav-item">
-            <Link to="/gallery" className="nav-item" onClick={closeMenu}>
+            <li className={color ? "nav-item changed" : "nav-item"}>
+              <Link to="/gallery" className="nav-item-link" onClick={closeMenu}>
                 Gallery
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/contact" className="nav-item" onClick={closeMenu}>
+            <li className={color ? "nav-item changed" : "nav-item"}>
+              <Link to="/contact" className="nav-item-link" onClick={closeMenu}>
                 Contact
               </Link>
             </li>

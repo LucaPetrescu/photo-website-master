@@ -1,4 +1,6 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 import { MdAlternateEmail } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
 import { GrInstagram, GrFacebook } from "react-icons/gr";
@@ -29,7 +31,14 @@ function Contact() {
           <p>Luca Petrescu</p>
         </div>
       </div>
-      
+      <div>
+        <MessengerCustomerChat
+          pageId="<PAGE_ID>"
+          appId="<APP_ID>"
+          htmlRef="<REF_STRING>"
+        />
+      </div>
+      <Footer className="footer" />
     </>
   );
 }
