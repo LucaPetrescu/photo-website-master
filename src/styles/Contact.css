@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
 /* body{
     font-family: 'Courier Prime', monospace;
     min-height: 100vh;
@@ -7,25 +7,45 @@
         
 } */
 
-.contact-info{
-    text-align:center;
-    margin-bottom: 15px;
-    margin-top: 531px;
+.main {
+  display: flex;
+}
+
+.contact-info {
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 131px;
+  position: relative;
+  height: 100vh; /* give the parent container a fixed height */
+  overflow: auto;
+}
+
+.main-content {
+  /* flex: 1; */
+  margin-bottom: 50px;
+  max-width: 100%;
+  max-height: 60%;
+  height: auto;
+  width: auto\9;
 }
 
 .contact-element {
-    display: inline-block;
-     margin: 70px; 
-    padding-top: 230px;
+  display: inline-block;
+  /* position: absolute; */
+  top: 300px;
+  margin: 70px;
+  padding-top: 230px;
 }
 
-.contact-info h2{
-    padding-left: 10px;
-    padding-right: 10px;
-}
+/* .contact-info h2 {
+  padding-left: 10px;
+  padding-right: 10px;
+} */
 
-.footer{
-    position: absolute;
-        bottom: 0;
-        width: 100%;
+.footer {
+  /* position: absolute;
+  bottom: 0; */
+  width: 100%;
+  /* align-self: flex-end; */
+  height: 175px;
 }

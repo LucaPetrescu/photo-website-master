@@ -22,22 +22,46 @@ function Gallery() {
     setOpenModal(false);
   };
 
+  const handleNextPicture = () => {
+    sliderNumber + 1 === photos.length
+      ? setSlideNumber(0)
+      : setSlideNumber(sliderNumber + 1);
+  };
+
+  const handlePrevPicture = () => {
+    sliderNumber === 0
+      ? setSlideNumber(photos.length - 1)
+      : setSlideNumber(sliderNumber - 1);
+  };
+
   return (
     <>
       <Navbar />
       <h1 className="title">Have a look at my work</h1>
       {openModal && (
         <div className={openModal ? "modal open" : "modal"}>
-          <div class="d-flex justify-content-center">
+          <div className="d-flex justify-content-center">
             <button
               id="btn-close"
-              class="btn btn-danger"
+              className="btn btn-danger"
               onClick={handleCloseModal}
             >
-              Close{" "}
+              Close
             </button>
-            <button id="btn-prev">prev</button>
-            <button id="btn-next">next</button>
+            <button
+              id="btn-prev"
+              className="btn btn-light"
+              onClick={handlePrevPicture}
+            >
+              &#8249;
+            </button>
+            <button
+              id="btn-next"
+              className="btn btn-light"
+              onClick={handleNextPicture}
+            >
+              &#8250;
+            </button>
           </div>
 
           <img src={photos[sliderNumber].img} alt=""></img>

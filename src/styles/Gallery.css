@@ -4,8 +4,12 @@
     flex-direction: column;
 } */
 
-.gal{
-display: flex;
+.main {
+  min-height: calc(100vh - 90px - 54px - 175px);
+}
+
+.gal {
+  display: flex;
   flex-wrap: wrap;
   gap: 70px;
   align-items: center;
@@ -17,81 +21,114 @@ display: flex;
   padding-top: 50px;
 }
 
-.gal img{
-    width: 200px;
-    padding-top: 30px;
-    cursor: pointer;
-    transition: .5s ease;
-
+.gal img {
+  width: 200px;
+  padding-top: 30px;
+  cursor: pointer;
+  transition: 0.5s ease;
 }
 
-.gal img:hover{
-    transform: scale(1.2);
-    opacity: 0.8;
+.gal img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
 }
 
-.title{
-    text-align: center;
-    margin-top: 100px;
-    background-color: rgb(177, 190, 190);
-    width: auto;
-    border-style: solid;
-        border-color: #B6C7D6;
-        border-radius: 20px;
-        background-color: #EAF0F6;
-    /* width: 1000px; */
+.title {
+  text-align: center;
+  margin-top: 100px;
+  background-color: rgb(177, 190, 190);
+  width: auto;
+  border-style: solid;
+  border-color: #b6c7d6;
+  border-radius: 20px;
+  background-color: #eaf0f6;
+  /* width: 1000px; */
 }
 
-.modal img{
-    width: auto;
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    display:block;
-    line-height: 0;
-    box-sizing: border-box;
-    padding: 20px 0 20px;
-    margin: 0 auto;
-    
+.modal img {
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  display: block;
+  line-height: 0;
+  box-sizing: border-box;
+  padding: 20px 0 20px;
+  margin: 0 auto;
 }
 
 .modal {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(182, 182, 182);
-    transition: opacity .4s ease, visibility .4s ease, transform .5s ease-in-out;
-    opacity: .4;
-    visibility: hidden;
-    transform: scale(0);
-    overflow: hidden;
-    z-index: 999;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(182, 182, 182);
+  transition: opacity 0.4s ease, visibility 0.4s ease,
+    transform 0.5s ease-in-out;
+  opacity: 0.4;
+  visibility: hidden;
+  transform: scale(0);
+  overflow: hidden;
+  z-index: 999;
 }
 
 .modal.open {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
 }
 
- #btn-close {
-    top: 50px;
-    right: 40px;
+#btn-close {
+  top: 50px;
+  right: 40px;
 }
 
 #btn-prev {
-    top: 100%;
-    /* transform: translateY(100px); */
-    left: 400px;
+  position: absolute;
+  top: 50%;
+  font-size: 50px;
+  cursor: pointer;
 }
 
 #btn-next {
-    top: 100%;
-    /* transform: translateY(-50%); */
-    right: 400px;
+  position: absolute;
+  top: 50%;
+  font-size: 50px;
+  cursor: pointer;
+  right: 100px;
+}
+
+#btn-prev {
+  left: 100px;
+}
+
+.footer {
+  width: 200px;
+}
+
+@media screen and (max-width: 1000px) {
+  #btn-prev {
+    position: absolute;
+    /* top: 50%; */
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    cursor: pointer;
+  }
+
+  #btn-next {
+    position: absolute;
+    /* top: 50%; */
+    bottom: 15px;
+    left: 50%;
+    font-size: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    right: 100px;
+  }
 }
