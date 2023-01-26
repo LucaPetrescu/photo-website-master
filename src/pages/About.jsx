@@ -34,24 +34,53 @@ function About() {
         <h2>Gear I use</h2>
       </div>
       <div className="images-container">
-        <ul className="list">
-          <li className="element">
+        {/* <ul className="list">
+          <li className="element1">
             <img src={nikond750}></img>
             <p>fdiosuagfisd</p>
           </li>
-          <li className="element">
+          <li className="element2">
             <img src={tamron2470mm}></img>
             <p>dsadsa</p>
           </li>
-          <li className="element">
+          <li className="element3">
             <img src={nikon50mm}></img>
             <p>dsawer453434</p>
           </li>
-          <li className="element">
+          <li className="element4">
             <img src={tamron70300mm}></img>
             <p>test</p>
           </li>
-        </ul>
+        </ul> */}
+        <div className="element1">
+          <p>Nikon</p>
+          <img src={nikond750}></img>
+          <p className="element1-text">
+            The backbone of all the shootings that I do. Even though the
+            technology on this camera is 9 years old, it still
+          </p>
+        </div>
+        <div className="element2">
+          <img src={tamron2470mm}></img>
+          <p className="element2-text">
+            The main lens for all of my shootings. It is ideal for portraits,
+            landscapes and well... basically everything
+          </p>
+        </div>
+        <div className="element3">
+          <img src={nikon50mm}></img>
+          <p className="element3-text">
+            The first lens that I got when I started with photography. It is one
+            of the best lenses for portraits.
+          </p>
+        </div>
+        <div className="element4">
+          <img src={tamron70300mm}></img>
+          <p className="element4-text">
+            An excellent choice for shooting wildlife, sport competitions and
+            panning photography.
+          </p>
+        </div>
       </div>
       <div>
         <Footer className="footer" />

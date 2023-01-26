@@ -2,14 +2,13 @@ import NavbarHome from "../components/NavbarHome";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import MainPhoto from "../assets/MainPhoto.jpg";
-import "../styles/Welcome.css";
 import "../styles/Home.css";
 
 function Home() {
   return (
-    <>
+    <div className="main">
+      <NavbarHome />
       <div className="home">
-        <NavbarHome />
         <div className="container">
           <img className="background-img" src={MainPhoto}></img>
           <Link to="/gallery">
@@ -18,7 +17,7 @@ function Home() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
