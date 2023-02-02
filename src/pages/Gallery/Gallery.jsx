@@ -1,12 +1,8 @@
-import { ImageData } from "../components/ImageData";
-import Footer from "../components/Footer";
-import "../styles/Gallery.css";
+import { ImageData } from "../../components/ImageData";
+import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
+
 import { useState } from "react";
-import Navbar from "../components/Navbar";
-import "../styles/Navbar.css";
-import { AiOutlineClose } from "react-icons/ai";
-import { GrNext } from "react-icons/gr";
-import { GrPrevious } from "react-icons/gr";
 
 function Gallery() {
   const photos = ImageData;
@@ -40,6 +36,7 @@ function Gallery() {
       <h1 className="title">Have a look at my work</h1>
       {openModal && (
         <div className={openModal ? "modal open" : "modal"}>
+          <img src={photos[sliderNumber].img} className="modal-img" />
           <div className="d-flex justify-content-center">
             <button
               id="btn-close"
@@ -63,8 +60,6 @@ function Gallery() {
               &#8250;
             </button>
           </div>
-
-          <img src={photos[sliderNumber].img} alt=""></img>
         </div>
       )}
 
@@ -77,7 +72,7 @@ function Gallery() {
                 key={index}
                 onClick={() => handleOpenModal(index)}
               >
-                <img src={photo.img} />
+                <img src={photo.img} className="gal-img" />
               </div>
             );
           })}

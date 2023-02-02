@@ -2,8 +2,6 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import "../styles/Navbar.css";
-
 function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);

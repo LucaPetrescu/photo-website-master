@@ -1,22 +1,22 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import nikond750 from "../assets/nikond750.png";
-import tamron2470mm from "../assets/tamron2470mm.png";
-import nikon50mm from "../assets/nikon50mm.png";
-import tamron70300mm from "../assets/tamron70300mm.png";
-import me from "../assets/me.jpg";
-import "../styles/About.css";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
+
+import nikond750 from "../../assets/nikond750.png";
+import tamron2470mm from "../../assets/tamron2470mm.png";
+import nikon50mm from "../../assets/nikon50mm.png";
+import tamron70300mm from "../../assets/tamron70300mm.png";
+import me from "../../assets/me.jpg";
 
 function About() {
   return (
-    <div className="main">
+    <div className="main-about">
       <Navbar />
-      <div className="container">
+      <div className="container-about">
         <h1>I am a full-time software engineer and part-time photograhper</h1>
-        <p className="presentation">
+        <h3 className="presentation">
           Hi! I'm Luca Petrescu. I love photography as much as I love writing
           code. Even this website is developed by me!
-        </p>
+        </h3>
         <div className="me-container">
           <img src={me}></img>
           <p>
@@ -34,24 +34,6 @@ function About() {
         <h2>Gear I use</h2>
       </div>
       <div className="images-container">
-        {/* <ul className="list">
-          <li className="element1">
-            <img src={nikond750}></img>
-            <p>fdiosuagfisd</p>
-          </li>
-          <li className="element2">
-            <img src={tamron2470mm}></img>
-            <p>dsadsa</p>
-          </li>
-          <li className="element3">
-            <img src={nikon50mm}></img>
-            <p>dsawer453434</p>
-          </li>
-          <li className="element4">
-            <img src={tamron70300mm}></img>
-            <p>test</p>
-          </li>
-        </ul> */}
         <div className="element1">
           <p>Nikon</p>
           <img src={nikond750}></img>

@@ -1,11 +1,9 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import MessengerCustomerChat from "react-messenger-customer-chat";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
+
 import { MdAlternateEmail } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
 import { GrInstagram, GrFacebook } from "react-icons/gr";
-import "../styles/Navbar.css";
-import "../styles/Contact.css";
 
 function Contact() {
   return (

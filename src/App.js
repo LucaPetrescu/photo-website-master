@@ -1,9 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Contact from "./pages/Contact";
-import Home from './pages/Home'
-import Gallery from "./pages/Gallery";
-import About from './pages/About'
-import Footer from './components/Footer'
+import Contact from "./pages/Contact/Contact";
+import Home from './pages/Home/Home'
+import Gallery from "./pages/Gallery/Gallery";
+import About from './pages/About/About';
+
+import './components/Footer/Footer.css'
+import './components/Navbar/Navbar.css'
+import './pages/About/About.css'
+import './pages/Contact/Contact.css'
+import './pages/Home/Home.css'
+import './pages/Gallery/Gallery.css'
 
 function App() {
   return (
